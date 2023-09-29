@@ -1,6 +1,6 @@
 var timeEl = document.querySelector(".time");
 
-var secondsLeft = 20;
+var secondsLeft = 60;
 
 function setTime() {
   var timerInterval = setInterval(function() {
@@ -9,13 +9,10 @@ function setTime() {
     
     if(secondsLeft === 0){
       clearInterval(timerInterval);
-
       sendMessage()
     }
-
   }, 1000)
 }
-
 function sendMessage() {
   timeEl.textContent = "Out of time! Play again."
 }
@@ -23,6 +20,26 @@ function sendMessage() {
 
 
 
+function playGame() {
+  
+  gameStats = [0, 0]
+  wordOptions = ["Dog", "Fish", "Cheetah"]
+
+  var randomWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
+
+  var answerArray = [];
+  for (i = 0; i < randomWord.length; i++) {
+    answerArray[i]= "_";
+  }
+
+var remainingLetters = randomWord.length;
+
+console.log(randomWord.length)
+console.log(answerArray)
+}
+
+
+playGame()
 
 
 
