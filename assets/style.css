@@ -1,0 +1,18 @@
+.game-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.game-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
